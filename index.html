@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Importando o arquivo CSS -->
+
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+    <br>
+    <br>
+    
+    <!-- Tabuleiro -->
+    <div class="tabuleiro">
+        <!-- Quadrados - Serão criados dinamicamente com JavaScript -->
+        <script>
+            // JavaScript para criar os quadrados e adicionar os manipuladores de evento
+            var tabuleiro = document.querySelector('.tabuleiro');
+    
+            for (var i = 1; i <= 9; i++) {
+                var quadrado = document.createElement('div');
+                quadrado.id = i;
+                quadrado.classList.add('quadrado');
+                quadrado.innerHTML = '-';
+                quadrado.addEventListener('click', function() {
+                    escolherQuadrado(this.id);
+                });
+                tabuleiro.appendChild(quadrado);
+            }
+        </script>
+    </div>
+    <br>
+
+    <!-- Informação do Jogador Atual -->
+    <div class="jogador">
+        <label>Jogador:</label>
+        <label id="jogador-selecionado"></label>
+    </div>
+
+    <!-- Informação do Vencedor (com emoji) -->
+    <div class="vencedor">
+        <label>Vencedor:</label>
+        <label id="vencedor-selecionado"></label>
+    </div>
+    <br>
+    <br>
+
+    <!-- Botão Reiniciar - Ao ser clicado, chama a função reiniciar() -->
+    <div>
+        <button class="reiniciar-button" onclick="reiniciar()">
+            <img src="reiniciar.png" alt="Reiniciar">
+        </button>
+    </div>
+    
+    <!-- Inclusão do arquivo JavaScript -->
+    <script src="jogo.js"></script> <!-- Importando o arquivo JavaScript -->
+
+</body>
+</html>
