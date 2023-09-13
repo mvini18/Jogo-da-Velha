@@ -1,5 +1,5 @@
 # Jogo da Velha
-Projeto de um Jogo da Velha inspirado no código fornecido pelo usuário ruschoni02.
+Projeto de um Jogo da Velha inspirado no código fornecido pelo usuário 'ruschoni02'.
 Link do projeto original: https://github.com/ruschoni02/jogo-da-velha
 
 # Proposta do Projeto
