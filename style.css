@@ -1,0 +1,69 @@
+/* Define a cor de fundo escura para o corpo da página */
+body {
+    background-color: #1b1c1d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Estiliza o título principal da página */
+h1 {
+    color: #ffffff;
+}
+
+/* Adicione estas regras para o contêiner da grade */
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* 3 colunas de tamanho automático */
+    grid-gap: 5px; /* Espaçamento entre as colunas e linhas */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-content: center; /* Centraliza verticalmente */
+    width: 165px; /* Largura total (3 colunas de tamanho automático + 2 * 5px de espaçamento) */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+/* Estiliza os quadrados e seus valores */
+.quadrado {
+    width: 80px; /* Largura maior para os quadrados */
+    height: 80px; /* Altura maior para os quadrados */
+    background: #ffffff; /* Azul escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px; /* Tamanho de fonte maior */
+    cursor: pointer;
+    color: #ffffff;
+    overflow: hidden;
+    border-radius: 10px; /* Cantos ligeiramente arredondados */
+    position: relative; /* Adiciona uma posição relativa */
+    user-select: none; /* Impede a seleção dos quadrados */
+}
+
+
+/* Estilos para os elementos com classe .jogador e .vencedor */
+.jogador, .vencedor {
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center; /* Centraliza horizontalmente */
+}
+
+/* Estilos para o botão de reiniciar */
+.reiniciar-button {
+    position: relative;
+    padding: 0;
+    background: none; /* Remova o fundo padrão do botão */
+    border: none; /* Remova a borda padrão do botão */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Adicione uma transição de escala */
+}
+
+/* Aumenta o tamanho da imagem quando hover */
+.reiniciar-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% (pode ajustar o valor) */
+}
+
+/* Estilos para a imagem dentro do botão */
+.reiniciar-button img {
+    width: 50px; /* Defina a largura da imagem conforme desejado */
+    height: 50px; /* Defina a altura da imagem conforme desejado */
+}
